@@ -1,0 +1,5 @@
+all:
+  sfTinyCMSPlugin:
+    class: sfDoctrineDatabase
+    param:
+      dsn:      sqlite:///%SF_DATA_DIR%/db/tiny_cms.db

@@ -1,0 +1,19 @@
+options:
+  collate:              utf8_unicode_ci
+  charset:              utf8
+
+TinyCmsPage:
+  connection:           sfTinyCMSPlugin
+  actAs:                [Timestampable, Versionable]
+  columns:
+    page_ref:           { type: string(100), notnull: true, unique: true }
+    title:              { type: string(255), notnull: false }
+    description:        { type: clob, notnull: false }
+    metadata:           { type: clob, notnull: false }
+
+TinyCmsContent:
+  connection:           sfTinyCMSPlugin
+  actAs:                [Timestampable, Versionable]
+  columns:
+    name:               { type: string(255), notnull: true, unique: true }
+    text:               { type: clob, notnull: true }
